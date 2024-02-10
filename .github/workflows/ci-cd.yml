@@ -15,4 +15,4 @@ jobs:
       run: |
         pip install papermill
     - name: Execute Notebook
-      run: papermill DATS-6501-Capstone.ipynb.ipynb Output_Notebook.ipynb
+      run: papermill DATS-6501-Capstone.ipynb Output_Notebook.ipynb
