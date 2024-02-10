@@ -6,13 +6,14 @@ jobs:
   run-notebook:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-    - name: Install Dependencies
-      run: |
-        pip install papermill
-    - name: Execute Notebook
-      run: papermill DATS-6501-Capstone.ipynb Output_Notebook.ipynb
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' # Adjust as necessary
+      - name: Install Dependencies
+        run: |
+          pip install notebook ipykernel papermill
+          python -m ipykernel install --user --name python3 --display-name "Python 3"
+      - name: Execute Notebook
+        run: papermill DATS-6501-Capstone.ipynb Output_Notebook.ipynb
