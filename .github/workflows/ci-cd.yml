@@ -13,7 +13,7 @@ jobs:
           python-version: '3.x' # Adjust as necessary
       - name: Install Dependencies
         run: |
-          pip install notebook ipykernel papermill
+          pip install notebook ipykernel papermill yfinance numpy dask pyspark seaborn matplotlib scipy pandas
           python -m ipykernel install --user --name python3 --display-name "Python 3"
       - name: Execute Notebook
         run: papermill DATS-6501-Capstone.ipynb Output_Notebook.ipynb
