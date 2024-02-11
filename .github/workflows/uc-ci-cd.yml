@@ -5,7 +5,7 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     # Runs every day at 09:00 UTC
-    - cron:  '3 20 * * *'
+    - cron:  '7 20 * * *'
 
 jobs:
   run-notebook:
@@ -20,4 +20,4 @@ jobs:
         run: |
           pip install notebook ipykernel papermill yfinance numpy dask pyspark seaborn matplotlib scipy pandas
       - name: Execute Notebook
-        run: papermill Copy of DATS-6501-Capstone.ipynb Output_Notebook.ipynb
+        run: papermill Copy_of_DATS-6501-Capstone.ipynb Output_Notebook.ipynb
