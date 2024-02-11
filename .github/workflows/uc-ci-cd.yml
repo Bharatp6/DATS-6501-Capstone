@@ -4,7 +4,7 @@ on:
   push:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    # Runs every day at 05:00 UTC
+    # Runs every day at 09:00 UTC
     - cron:  '0 9 * * *'
 
 jobs:
